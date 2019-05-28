@@ -1,4 +1,19 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <preference for="\MagentoPlus\DataBases\Api\Data\ExampleAttributeInterface" type="\MagentoPlus\PluginInvestigation\Model\VirtualClass"/>
+    <preference for="MagentoPlus\DataBases\Api\Data\ExampleAttributeInterface" type="MagentoPlus\DataBases\Model\ExampleAttribute"/>
+    <type name="Magento\Framework\MessageQueue\MergerFactory">
+        <arguments>
+            <argument name="mergers" xsi:type="array">
+                <item name="test_bulk_save_consumer" xsi:type="string">\MagentoPlus\DataBases\Model\Consumer\MergeBulk</item>
+            </argument>
+        </arguments>
+    </type>
+   <type name="Magento\Framework\Console\CommandListInterface">
+       <arguments>
+           <argument name="commands" xsi:type="array">
+               <item name="createTestBulk" xsi:type="object">MagentoPlus\DataBases\Console\CreateBulk</item>
+               <item name="rpcCallTest" xsi:type="object">MagentoPlus\DataBases\Console\RpcCall</item>
+           </argument>
+       </arguments>
+   </type>
 </config>
