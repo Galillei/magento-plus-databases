@@ -43,7 +43,6 @@ class TestRpcConsumer
     }
 
     /**
-     * Processing operation for update price
      *
      * @param string $data
      * @return void
