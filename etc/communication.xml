@@ -2,4 +2,7 @@
     <topic name="test.bulk.save" request="Magento\AsynchronousOperations\Api\Data\OperationInterface">
         <handler name="test_bulk_handler" type="MagentoPlus\DataBases\Model\Consumer\TestBulkConsumer" method="processOperation" />
     </topic>
+    <topic name="test.remote.rpc" request="string" response="string">
+        <handler name="test_remote_rpc" type="MagentoPlus\DataBases\Model\Consumer\TestRpcConsumer" method="processOperation" />
+    </topic>
 </config>

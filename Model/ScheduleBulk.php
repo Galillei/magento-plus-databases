@@ -121,7 +121,6 @@ class ScheduleBulk
         }
 
         $requestItems = [];
-        $bulkException = new BulkException();
         $operationCount = 100;
         $operations = [];
 
@@ -150,14 +149,6 @@ class ScheduleBulk
         $asyncResponse = $this->asyncResponseFactory->create();
         $asyncResponse->setBulkUuid($groupId);
         $asyncResponse->setRequestItems($requestItems);
-
-        if ($bulkException->wasErrorAdded()) {
-            $asyncResponse->setErrors(true);
-            $bulkException->addData($asyncResponse);
-            throw $bulkException;
-        } else {
-            $asyncResponse->setErrors(false);
-        }
 
         return $asyncResponse;
     }

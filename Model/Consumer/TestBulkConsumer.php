@@ -49,7 +49,6 @@ class TestBulkConsumer
     }
 
     /**
-     * Processing operation for update price
      *
      * @param \Magento\AsynchronousOperations\Api\Data\OperationInterface $operation
      * @return void
@@ -60,7 +59,6 @@ class TestBulkConsumer
         $errorCode = null;
         $message = null;
         $serializedData = $operation->getSerializedData();
-        var_dump($serializedData);
         $unserializedData = $this->jsonHelper->unserialize($serializedData);
         try {
             $this->logger->debug('test.bulk.consumer', $operation->toArray());

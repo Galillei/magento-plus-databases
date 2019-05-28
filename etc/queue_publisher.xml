@@ -2,4 +2,7 @@
     <publisher topic="test.bulk.save">
         <connection name="amqp" exchange="magento" />
     </publisher>
+    <publisher topic="test.remote.rpc">
+        <connection name="amqp" exchange="magento" />
+    </publisher>
 </config>

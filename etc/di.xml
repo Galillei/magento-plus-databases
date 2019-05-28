@@ -12,6 +12,7 @@
        <arguments>
            <argument name="commands" xsi:type="array">
                <item name="createTestBulk" xsi:type="object">MagentoPlus\DataBases\Console\CreateBulk</item>
+               <item name="rpcCallTest" xsi:type="object">MagentoPlus\DataBases\Console\RpcCall</item>
            </argument>
        </arguments>
    </type>
