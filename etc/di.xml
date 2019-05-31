@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <preference for="MagentoPlus\DataBases\Api\Data\ExampleAttributeInterface" type="MagentoPlus\DataBases\Model\ExampleAttribute"/>
+    <preference for="MagentoPlus\DataBases\Api\TestWebApiInterface" type="MagentoPlus\DataBases\Model\WebApi\TestWebApi"/>
     <type name="Magento\Framework\MessageQueue\MergerFactory">
         <arguments>
             <argument name="mergers" xsi:type="array">
